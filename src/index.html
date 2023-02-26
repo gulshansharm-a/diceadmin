@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Admin</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Font Awesome -->
+  <style>
+    /*!
+ * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+@font-face {
+    font-family: ff1;
+    src: url(../fonts/Dosis-Regular.otf);
+}
+@font-face {
+    font-family: ff2;
+    src: url(../fonts/bold.ttf);
+}
+@font-face {
+    font-family: ff3;
+    src: url(../fonts/digital.ttf);
+}
+html,
+body {
+    height: 100%;
+	font-family:ff1;	
+}
+a
+{
+	font-size:15px;
+}
+body {
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	background:#fafafa;
+	color:#555;
+	}
+@media (max-width:767px) { 
+
+body {
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	}
+
+}
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+
+.navi
+{
+	
+	background:#e57373;
+	border-bottom:5px solid #ef9a9a;
+}
+.navi .navbar-nav >.open>a
+{
+	color:#222 !important;
+}
+.navid
+{
+	padding:5px;
+}
+.pix
+{
+padding:8px 10px!important;	
+background:#4CAF50;
+color:#fff !important;
+border:1px solid #eee;
+font-size:12px;
+margin-left:5px;
+}
+.navi .navbar-brand
+{
+	color:#fff;
+	
+}
+.mn-bt i
+{
+	font-size:40px;
+}
+.section-2
+{
+	margin-top:50px;
+}
+.box-1 .panel-heading
+{
+	font-weight:light;
+	font-size:25px;
+	
+}
+.box-1 .panel-body
+{
+	font-weight:bold;
+}
+#infoMessage
+{
+	color:#f00;
+}
+.chart
+{
+	margin-top:30px;
+}
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 300px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 300px;
+    width: 0;
+    height: 90vh;
+    margin-left: -300px;
+    overflow-y: auto;
+   
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 300px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -300px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 280px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	background:url(../img/bgw1.png);
+	margin-left:20px;
+	margin-top:10px;
+	border:1px solid #aaa;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+	width:100%;
+	float:left;
+	
+}
+.sider
+{
+	border:1px solid #dedede;
+	display:block;
+	width:100%;
+	text-align:center;
+	min-height:43px;
+	line-height:110%;
+	
+	
+}
+.sider:hover
+{
+	background:#1E88E5;
+	color:#fff;
+	text-decoration:none;
+	border:1px solid #80DEEA;
+	
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+	border-top:1px solid #999;
+	
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+	
+}
+.sidebar-nav .active
+{
+	background:#e57373;
+	color:#fff;
+}
+
+.sidebar-nav > .sidebar-brand {
+  
+      line-height:20px; padding-top:5px;
+	  padding-bottom:3px;
+	  color:#1E88E5;
+	  font-size:20px;
+}
+.sidebar-nav > .sidebar-brand h3{
+  
+     font-family:ff2;
+	  font-size:20px;
+}
+.sidebar-nav > .sidebar-brand a {
+    color: #2c3e50;
+	font-size:18px;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #000;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 300px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 300px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+.pox
+{
+	padding:5px;
+	padding-left:5px !important;
+	padding-right:5px !important;
+	
+}
+.picon
+{
+	font-size:25px;
+}
+.panel-coral{
+    background-color:#F06C71;
+    color: #fff; 
+}
+.panel-coral .btn{
+    color: #F06C71;
+}
+.widget-icon{
+    float: left;
+    font-size: 80px;
+    min-height: 80px;
+    line-height: 35px;
+    opacity: 0.5;
+}
+
+.widget-details {
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    padding-right: 15px;
+}
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.yellow{
+    background-color:#FFC107;
+    color: #fff; 
+}
+.blue{
+    background-color:#2196F3;
+    color: #fff; 
+}
+.events ul li
+{
+	list-style-type:none;
+	margin-bottom:10px;
+}
+.events ul
+{
+	margin-left:0px;
+	padding-left:0px;
+}
+
+.t1
+{
+	color:#D84315;
+}
+.t2
+{
+	color:#8E24AA;
+}
+.t3
+{
+	color:#00695C;
+}
+.t4
+{
+	color:#FFC107;
+}
+.t5
+{
+	color:#00BFA5;
+}
+.t6
+{
+	color:#AEEA00;
+}
+.t7
+{
+	color:#FF6D00;
+}
+.p-updates ul li
+{
+	list-style-type:none;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-bottom:1px solid #eee;
+	font-size:12px;
+}
+.p-updates ul
+{
+	margin-left:0px;
+	padding-left:0px;
+	
+}
+.p-updates ul li a
+{
+	font-family:ff2;
+	font-size:18px;
+	
+}
+.p-updates ul li p
+{
+	color:#000;
+}
+.new-modal .modal-content
+{
+	border-radius:0px;
+	line-height:8px;
+}
+.new-modal .form-control
+{
+	border-radius:0px;
+	background:#efefef;
+	height:35px;
+	border:1px solid #eee;
+	box-shadow:none;
+}
+.inn
+{
+	padding:5px 5px !important;
+}
+.project-menu
+{
+	background:#fff;
+	width:100%;
+}
+.btn1
+{
+	padding:10px 20px;
+	color:#999;
+	border-radius:0px;
+}
+  .active1
+  {
+	  border-bottom:5px solid #1caddf;
+  }
+
+.pro
+{
+	background:#fff;
+	text-align:center;
+	padding:10px 5px;
+}
+.jp
+{
+	margin:0 auto;
+}
+.pro-bot
+{
+	margin-top:10px;
+	text-align:left;
+	border-top:1px solid #eee;
+	padding-top:10px;
+	padding-left:10px;
+}
+.p-d
+{
+	min-height:340px;
+}
+.p-d-m
+{
+	min-height:600px;
+}
+.addpro .form-control
+{
+	border-radius:0px;
+	background:#efefef;
+	height:40px;
+	border:1px solid #eee;
+	box-shadow:none;
+	margin-bottom:10px;
+}
+.popover
+{
+	max-width:500px;
+	width:400px;
+}
+.popover-title {
+    color: blue;
+    font-size: 15px;
+}
+.popover-content {
+
+	max-width:500px;
+	width:100%;
+}
+.popover-content span
+{
+	color:#000;
+	font-size:15px;
+}
+.date
+{
+	width:100px;
+	text-align:center;
+	font-size:35px;
+}
+
+.date .header
+{
+	background:#ff0000;
+	font-size:20px;
+	color:#fff;
+}
+.date .middle
+{
+	font-size:15px;
+	color:#000;
+}
+.date .footer
+{
+	background:#aaa;
+	color:#fff;
+	font-size:18px;
+}
+.events .prod
+{
+	font-size:12px;
+	color:#006600;
+	
+}
+.activ
+{
+	background:#1caddf;
+	
+}
+	
+.activ a
+{
+	color:#fff !important;
+}	
+.timers
+{
+font-size:16px;
+color:#fff;
+padding:6px;	
+}
+#timex
+{
+	width:100px;
+}
+#clock
+{
+	font-size:40px;
+	font-family:ff3;
+	text-align:center;
+}
+.clock
+{
+	font-family:ff3;
+	text-align:center;
+	font-size:24px;
+}
+.navi ul li a
+{
+	color:#fff !important;
+}
+.date1
+{
+	width:100%;
+	text-align:center;
+	font-size:25px;
+}
+.date1 .header
+{
+	background:#ff0000;
+	font-size:17px;
+	color:#fff;
+}
+.date1 .middle
+{
+	font-size:12px;
+	color:#000;
+}
+.date1 .footer
+{
+	background:#aaa;
+	color:#fff;
+	font-size:14px;
+}
+.callout
+{
+	padding:5px;
+	text-align:center;
+}
+.c1
+{
+	background:#a33;
+	color:#fff;
+}
+.c2
+{
+	background:#3a3;
+	color:#fff;
+}
+.c3
+{
+	background:#33a;
+	color:#fff;
+}
+.message
+{
+	background:#fff; border:1px solid #ccc;
+	padding:10px;
+	font-size:11px;
+}
+
+#viewer span
+{
+	font-size:12px;
+	color:#aaa;
+}
+#viewer
+{
+	font-size:14px;
+}
+.intro
+{
+	font-size:30px;
+	color:#dfdfdf;
+	text-align:center;
+	
+}
+.intro i 
+{
+	font-size:150px;
+}
+.task-reports
+{
+	font-size:11px;
+
+}
+
+.panel-heading
+{
+	font-family:ff2;
+}
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background:#fff;
+  padding:10px 10px;
+  margin-bottom:10px;
+}
+.cx1
+{
+	min-height:202px;
+}
+.blox
+{
+	font-size:13px;
+	font-family:ff2;
+}
+
+.blox span
+{
+	font-size:20px;
+	font-family:ff1;
+}
+.blox h4
+{
+	font-size:16px;
+}
+.popo
+{
+	font-size:20px !important;
+}
+.font5
+{
+	font-family:ff3;
+	font-size:22px;
+}
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/Preloader_7.gif) center no-repeat #fff;
+}
+.se-pre-con1 {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/loading.gif) center no-repeat rgba(255,255,255,.7);
+	display:none;
+}
+.highlight
+{
+	font-size:18px;
+	font-weight:bold;
+	border:2px;
+}
+  </style>
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+rel="stylesheet"
+/>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

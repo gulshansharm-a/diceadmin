@@ -1,0 +1,270 @@
+<div style="background-color:aliceblue">
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col-sm-12 ">
+					<div class="panel panel-default ">
+						<div class="panel-body blox">
+							<h4 class="col-sm-7">Today's Summary <span>(10-02-2023 )</span>
+							</h4>
+							<!-- <h4 class="col-sm-7">Today's Summary <span>{{ value_expression | date [ : format [ : timezone [ : locale ] ] ] }}</span>
+							</h4> -->
+							<div id="clock" class="col-sm-5 text-right popo">11:02:32</div>
+
+							<div class="clearfix"></div>
+							<div class="breadcrumb blox" id="live2">
+								<div class="col-sm-3 text-center">
+									Total Online Players<br> <span>{{agent_arr.length}}</span>
+								</div>
+								<div class="col-sm-3 text-center">
+									Total Bet <br> <span>{{this.totalbet}}</span>
+								</div>
+								<div class="col-sm-3 text-center">
+									Last Winning Number<br> <span>0</span>
+								</div>
+								<div class="col-sm-3 text-center">
+									Estimated Winning Number<br> <span>0</span>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<h4 class="col-sm-7">Current Estimates <span> </span>
+							</h4>
+
+
+							<div class="clearfix"></div>
+							<div class="breadcrumb blox" id="live2">
+								<div class="col-sm-2 text-center">
+									Red<br> <span>5</span>
+								</div>
+								<div class="col-sm-2 text-center">
+									Black <br> <span>5</span>
+								</div>
+								<div class="col-sm-1 text-center">
+									1<br> <span>0</span>
+								</div>
+								<div class="col-sm-1 text-center">
+									2<br> <span>0</span>
+								</div>
+								<div class="col-sm-1 text-center">3 <br> <span>0</span>
+
+								</div>
+								<div class="col-sm-1 text-center">4 <br> <span>0</span>
+
+								</div>
+								<div class="col-sm-1 text-center">5 <br> <span>0</span>
+
+								</div>
+								<div class="col-sm-1 text-center">6 <br> <span>0</span>
+
+								</div>
+								<div class="clearfix"></div>
+
+
+							</div>
+
+							<h4 class="col-sm-7">Current Estimates X6 <span> </span>
+							</h4>
+
+
+							<div class="clearfix"></div>
+							<div class="breadcrumb blox" id="live2">
+
+								<div class="col-sm-2 text-center"> 1 <br> <span>0</span>
+								</div>
+								<div class="col-sm-2 text-center"> 2 <br> <span>0</span>
+								</div>
+								<div class="col-sm-2 text-center"> 3 <br> <span>0</span>
+
+								</div>
+								<div class="col-sm-2 text-center"> 4 <br> <span>0</span>
+
+								</div>
+								<div class="col-sm-2 text-center"> 5 <br> <span>0</span>
+
+								</div>
+								<div class="col-sm-1 text-center"> 6 <br> <span>0</span>
+
+								</div>
+								<div class="clearfix"></div>
+
+
+							</div>
+
+							<h4 class="col-sm-7">Customise Output<span> </span>
+							</h4>
+
+
+							<div class="clearfix"></div>
+							<div class="breadcrumb blox" id="live2">
+								<div class="col-sm-4 text-center">
+									<div class="dataTables_length" id="tabler_length"><label> Show Number <select
+												name="tabler_length" aria-controls="tabler" class="form-control
+										input-sm">
+
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="auto">auto</option>
+											</select>
+										</label></div>
+								</div>
+								<div class="col-sm-4 text-center">
+									<div class="dataTables_length" id="tabler_length"><label>Show Color <select
+												name="tabler_length" aria-controls="tabler" class="form-control
+										input-sm">
+												<option value="red">Red</option>
+												<option value="black">Black</option>
+												<option value="auto">auto</option>
+
+											</select>
+										</label></div>
+								</div>
+
+								<div class="col-sm-4 text-center">
+									<button class="btn btn-warning pull-right">Submit</button>
+								</div>
+
+								<div class="clearfix"></div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div id="page-content-wrapper">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="col-sm-7">Online Players
+										</h4>
+				
+										<!-- <div id="Totalbet" class="col-sm-5 text-right popo">Total Balance : <span>21453</span></div> -->
+				
+										<div class="clearfix"></div>
+									</div>
+									<div class="panel-body">
+										<div class="table-responsive">
+											<div id="tabler_wrapper" class="dataTables_wrapper form-inline
+												dt-bootstrap no-footer">
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="dataTables_length" id="tabler_length"><label>Show 
+															<select #teams (change)="onTableSizeChange(teams.value)"
+																	name="tabler_length" aria-controls="tabler" class="form-control
+																	input-sm">
+																	<option value="10">10</option>
+																	<option value="25">25</option>
+																	<option value="50">50</option>
+																	<option value="100">100</option>
+																</select>
+																entries</label></div>
+													</div>
+													<div class="col-sm-6">
+														<div id="tabler_filter" class="dataTables_filter"><label>Search:
+																<input type="search" class="form-control input-sm" placeholder=""
+																	aria-controls="tabler"></label></div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-12">
+														<table class="table table-bordered datatable
+															table-striped dataTable no-footer" id="tabler" role="grid" aria-describedby="tabler_info"
+															style="width: 1075px;">
+															<thead>
+																<tr role="row">
+																	<td class="sorting_asc" tabindex="0" aria-controls="tabler"
+																		rowspan="1" colspan="1" aria-sort="ascending" aria-label="Id: activate to sort column
+																		descending" style="width: 14.2px;">S No</td>
+																	<td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+																		colspan="1"
+																		aria-label="Username: activate to sort column ascending"
+																		style="width: 71.2px;">Id</td>
+																	<td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+																		colspan="1" aria-label="Name: activate to sort column ascending"
+																		style="width:
+																		52.2px;">Username</td>
+																	<td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+																		colspan="1"
+																		aria-label="Credits: activate to sort column ascending"
+																		style="width: 45.2px;">Balance</td>
+																	<td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+																		colspan="1"
+																		aria-label="Total Bet: activate to sort column ascending"
+																		style="width: 55.2px;">Bet</td>
+																	<td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+																		colspan="1"
+																		aria-label="Total Win: activate to sort column ascending"
+																		style="width: 58.2px;">Win Point</td>
+																	<td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+																		colspan="1"
+																		aria-label="Casino Profit: activate to sort column ascending"
+																		style="width: 79.2px;"> Details</td>
+																	 
+																</tr>
+															</thead>
+															<tbody id="loader">
+																<tr role="row" class="even" *ngFor="let user of agent_arr">
+																	<td class="sorting_1">{{user['uid']}}</td>
+																	<td><a href="memberdetails/{{user['uid']}}">{{user['email']}} <i
+																				class="fa fa-eye"></i></a></td>
+																	<td>{{user['userName']}}</td>
+																	<td>{{user['balance']}}</td>
+																	<td>{{user['total_Bet']}}</td>
+																	<td>{{user['total_Winning']}}</td>
+																	<td>
+																		<div class="btn-group">
+																			<!-- <a href="dis/{{disId}}/agent/{{['agentId']}}" class="btn btn-info
+																				btn-sm">Edit</a> -->
+						
+																			<a href="memberdetails/{{user['uid']}}" class="btn
+																				btn-default btn-sm" title="User"><i class="fa
+																					fa-history"></i></a>
+						
+																			<!-- <a href="" class="btn
+																				btn-success btn-sm" title="Ban User"><i (click)="delete(user['id'])" class="fa fa-ban"></i></a> -->
+																		</div>
+						
+																	</td>
+																</tr>
+															</tbody>
+						
+														</table>
+														<div class="d-flex justify-content-center">
+															<pagination-controls
+															  previousLabel="Prev"
+															  nextLabel="Next"
+															  (pageChange)="onTableDataChange($event)"
+															>
+															</pagination-controls>
+														  </div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-5">
+														<div class="dataTables_info" id="tabler_info" role="status" aria-live="polite">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+</div>

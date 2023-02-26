@@ -1,0 +1,119 @@
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="col-sm-7">Pending Withdrawals
+                        </h3>
+                        <div class="dropdown show col-sm-2">
+							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  Withdrawals
+							</a>
+						  
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							  <a class="dropdown-item" href="pendings">Pending Requests</a>
+							  <a class="dropdown-item" href="done">Done</a>
+							</div>
+						  </div>
+
+                        <div id="Totalbet" class="col-sm-3 text-right popo">Total Pendings <span>{{this.count}} </span>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <div id="tabler_wrapper" class="dataTables_wrapper form-inline
+								dt-bootstrap no-footer">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="dataTables_length" id="tabler_length"><label>Show <select
+                                                    name="tabler_length" aria-controls="tabler" class="form-control
+													input-sm">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                                entries</label></div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div id="tabler_filter" class="dataTables_filter"><label>Search:
+                                                <input type="search" class="form-control input-sm" placeholder=""
+                                                    aria-controls="tabler"></label></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table class="table table-bordered datatable
+											table-striped dataTable no-footer" id="tabler" role="grid" aria-describedby="tabler_info"
+                                            style="width: 1075px;">
+                                            <thead>
+                                                <tr role="row">
+                                                    <td class="sorting_asc" tabindex="0" aria-controls="tabler"
+                                                        rowspan="1" colspan="1" aria-sort="ascending" aria-label="Id: activate to sort column
+														descending" style="width: 14.2px;">Id</td>
+                                                    <td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+                                                        colspan="1"
+                                                        aria-label="Username: activate to sort column ascending"
+                                                        style="width: 71.2px;">User ID</td>
+                                                    <td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+                                                        colspan="1" aria-label="Name: activate to sort column ascending"
+                                                        style="width:
+														52.2px;">UPI ID</td>
+                                                    <td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+                                                        colspan="1"
+                                                        aria-label="Credits: activate to sort column ascending"
+                                                        style="width: 45.2px;">Time</td>
+                                                    <td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+                                                        colspan="1"
+                                                        aria-label="Total Bet: activate to sort column ascending"
+                                                        style="width: 55.2px;">Date</td>
+                                                    <td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+                                                        colspan="1"
+                                                        aria-label="Total Win: activate to sort column ascending"
+                                                        style="width: 58.2px;">Amount</td>
+                                                    <td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+														colspan="1"
+														aria-label="Casino Profit: activate to sort column ascending"
+														style="width: 79.2px;">Bank Account No</td>
+                                                        <td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+														colspan="1"
+														aria-label="Casino Profit: activate to sort column ascending"
+														style="width: 79.2px;">Bank Account No</td>
+                                                    <td class="sorting" tabindex="0" aria-controls="tabler" rowspan="1"
+                                                        colspan="1"
+                                                        aria-label="Actions: activate to sort column ascending"
+                                                        style="width: 152px;">Actions</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr role="row" class="even" *ngFor="let user of w_arr ">
+                                                    <td class="sorting_1"> {{user['amount']}} </td>
+                                                    <td><a href="">E-mail<i class="fa fa-eye"></i></a></td>
+                                                    <td>{{user['upi_ID']}}</td>
+                                                    <td>{{user['mobile_No']}}</td>
+                                                    <td>{{user['ifsc_Code']}}</td>
+                                                    <td>{{user['amount']}}</td>
+                                                    <td>{{user['status']}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="dataTables_info" id="tabler_info" role="status" aria-live="polite">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>

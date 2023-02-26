@@ -1,0 +1,109 @@
+.headline {
+    text-align: center;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ebffff !important ;
+}
+ 
+.Data {
+    margin-top: 2vw;
+}
+
+.Data>div {
+    margin-bottom: 1vw;
+    padding: 0vh 13vh;
+}
+
+.value>div {
+    margin-bottom: 3vw;
+    border: solid 3px black;
+}
+
+.value>div {
+    margin-bottom: 2vw 1vh;
+    margin: 1vw 1vw;
+    height: 9vh;
+    padding: 3vh 1vh;
+    border: solid 3px black;
+    border-radius: 16px;
+}
+ 
+ 
+
+.input {
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    border: 2px solid black;
+    border-radius: 18px;
+    margin-top: 2vh;
+    background-color: rgb(207 240 244);
+}
+
+.Inputbox {
+
+    border-radius: 18px;
+}
+ 
+.tables{
+  margin: 2vw 0vw;
+}
+  
+.tablehead>th{
+  text-align: center;
+}
+   .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 33%;
+  }
+
+  /* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .details{
+    text-align: center;
+  }
+
+  .vertical-line  {
+    width: 3px;
+    height: 50vh;
+    border: solid 1px black;
+}

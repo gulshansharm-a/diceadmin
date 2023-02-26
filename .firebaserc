@@ -1,0 +1,28 @@
+{
+  "targets": {
+    "roulette-83221": {
+      "hosting": {
+        "admin": [
+          "roulette-83221"
+        ]
+      }
+    },
+    "roulette-cfe24": {
+      "hosting": {
+        "admin": [
+          "roulette-cfe24"
+        ]
+      }
+    },
+    "roulette-aee9f": {
+      "hosting": {
+        "admin": [
+          "roulette-aee9f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "roulette-aee9f"
+  }
+}
