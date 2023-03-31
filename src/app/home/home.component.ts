@@ -31,9 +31,26 @@ export class HomeComponent {
   des_arr: any = [];
   agent_arr: any = [];
   posts:any;
-  
+  interval:any;
+
+  b1:number=0;
+  b2:number=0;
+  b3:number=0;
+  b4:number=0;
+  b5:number=0;
+  b6:number=0;
+  b7:number=0;
+  b8:number=0;
+  amount:number = 0;
   constructor(public httpClient: HttpClient,public ActiveR: ActivatedRoute, public firebaseDatabase: AngularFireDatabase,private service:GamedataService) {
+    firebaseDatabase.list('players',(ref)=>ref.orderByChild("balance").equalTo(0)).valueChanges().subscribe(s=>{
+      console.log("response is -->lkjjkk")
+      console.log(s);
+      console.log("response is -->lijkljk")
+    })
     firebaseDatabase.list<S>('players').valueChanges().forEach(data => {
+    this.startTimer()
+
       data.forEach(s=>{
            this.totalbet = this.totalbet! +  (s.total_Bet!);
           //  console.log(this.totalbalance)
@@ -51,6 +68,27 @@ export class HomeComponent {
     });
 
   }
+  startTimer() {
+    this.interval = setInterval(() => {
+      
+      this.httpClient.get(this.url)
+    .subscribe((response) => {
+      this.posts = response;
+      console.log("response is -->")
+      this.b1=parseInt(response.toString().split(',')[0]) 
+      this.b2=parseInt(response.toString().split(',')[1]) 
+      this.b3=parseInt(response.toString().split(',')[2]) 
+      this.b4=parseInt(response.toString().split(',')[3]) 
+      this.b5=parseInt(response.toString().split(',')[4]) 
+      this.b6=parseInt(response.toString().split(',')[5]) 
+      this.b7=parseInt(response.toString().split(',')[6]) 
+      this.b8=parseInt(response.toString().split(',')[7]) 
+      this.amount += 1;
+      console.log("-->response endned ")
+    });
+    },5000)
+  }
+
 
   
   onTableDataChange(event: any) {

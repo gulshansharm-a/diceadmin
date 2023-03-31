@@ -1,4 +1,8 @@
 {
+  "projects": {
+    "default": "roulette-aee9f",
+    "null": "dicegame-ce163"
+  },
   "targets": {
     "roulette-83221": {
       "hosting": {
@@ -22,7 +26,5 @@
       }
     }
   },
-  "projects": {
-    "default": "roulette-aee9f"
-  }
+  "etags": {}
 }

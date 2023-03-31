@@ -13,23 +13,18 @@ export class WalletsComponent {
   tableSize: number = 3;
   wallet_arr:any= [];
   constructor(public ActiveR :ActivatedRoute,public firebaseDatabase:AngularFireDatabase) {
-    firebaseDatabase.list('wallets').valueChanges().forEach(data=>{
+    firebaseDatabase.list('withdraw-request').valueChanges().forEach(data=>{
       this.wallet_arr = (data) 
       console.log(  this.wallet_arr );
     })
   }
-  //   ngOnInit() {
-  //     console.log(this.wallet_arr,"uhu")
-  //  }
+
     delete(id:string) {
       console.log("alkjsd " + id)
       // if ( confirm("are you sure") == true) {
-        this.firebaseDatabase.list('wallets/'+id).remove();   
-        // console.log("     asldjklf")
-        //  }
-     
-     
+        this.firebaseDatabase.list('withdraw-request/'+id).remove();   
      }
+     
      onTableDataChange(event: any) {
       this.page = event;
       // this.fetchPosts();
